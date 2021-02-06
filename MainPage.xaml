@@ -1,0 +1,16 @@
+﻿<Page
+    x:Class="dx4_win2d.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:dx4_win2d"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:canvas="using:Microsoft.Graphics.Canvas.UI.Xaml"
+    mc:Ignorable="d"
+    Unloaded="Page_Unloaded">
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" >
+        <!--<canvas:CanvasControl Draw="CanvasControl_Draw" ClearColor="Black"/>-->
+        <Image x:Name="stars" Source="AppX/Assets/stardusk.png" />
+        <canvas:CanvasAnimatedControl x:Name="canvas" Draw="canvas_Draw" CreateResources="canvas_CreateResources" ClearColor="Black" Update="canvas_Update" KeyDown="canvas_KeyDown" IsTabStop="True" />
+    </Grid>
+</Page>
